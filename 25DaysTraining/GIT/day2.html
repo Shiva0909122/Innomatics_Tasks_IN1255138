@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Git @Innomatics Research Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+            animation: fadeIn 2s;
+
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em;
+            text-align: center;
+            animation: fadeInDown 2s;
+        }
+
+        main {
+            padding: 2em;
+            animation: fadeIn 2s;
+        }
+
+        section {
+            margin-bottom: 2em;
+            animation: slideInUp 2s;
+        }
+
+        .example {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 1em;
+            margin-top: 1em;
+            animation: zoomIn 2s;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #f1f1f1;
+            padding: 1em;
+
+            bottom: 0;
+
+            animation: fadeInUp 2s;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Introduction to Git:</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Overview</h2>
+            <p>A beginner-friendly Git training course designed to cover the fundamentals of version control and Git
+                workflows.</p>
+            <ul>
+                <li>Delivered through 3 hours of self-paced video lessons.</li>
+                <li>Certificate of completion upon finishing.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Key Topics Covered</h2>
+            <ul>
+                <li><strong>Git Basics</strong>: Understanding version control, Introduction to Git, Installing and
+                    setting up Git.</li>
+                <li><strong>Branching and Merging</strong>: Creating and managing branches, Merging changes effectively.
+                </li>
+                <li><strong>Git Workflows</strong>: Commit workflows, Resolving conflicts.</li>
+                <li><strong>GitHub Integration</strong>: Pushing code to GitHub, Collaborating with teams.</li>
+            </ul>
+            <div class="example">
+                <h3>Live Example: Commit and Push to GitHub</h3>
+                <ol>
+                    <li>Initialize a Git repository: <code>git init</code></li>
+                    <li>Add files to staging: <code>git add .</code></li>
+                    <li>Commit changes: <code>git commit -m "Initial commit"</code></li>
+                    <li>Push to GitHub:
+                        <ul>
+                            <li>Create a new repository on GitHub.</li>
+                            <li>Connect the remote: <code>git remote add origin [repository-URL]</code></li>
+                            <li>Push changes: <code>git push -u origin main</code></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <h2>Common Git Commands</h2>
+            <ul>
+                <li><strong>Setup and Configuration:</strong>
+                    <ul>
+                        <li><code>git init</code>: Initialize a new Git repository.</li>
+                        <li><code>git config --global user.name "Your Name"</code>: Set username.</li>
+                        <li><code>git config --global user.email "your@example.com"</code>: Set email.</li>
+                    </ul>
+                </li>
+                <li><strong>Basic Workflow:</strong>
+                    <ul>
+                        <li><code>git clone &lt;repo_url&gt;</code>: Clone a repository.</li>
+                        <li><code>git add &lt;file&gt;</code>: Add a file to staging.</li>
+                        <li><code>git commit -m "message"</code>: Commit changes.</li>
+                        <li><code>git push</code>: Push changes to a remote repository.</li>
+                        <li><code>git pull</code>: Fetch and merge changes from a remote repository.</li>
+                    </ul>
+                </li>
+                <li><strong>Branching and Merging:</strong>
+                    <ul>
+                        <li><code>git branch &lt;branch_name&gt;</code>: Create a new branch.</li>
+                        <li><code>git checkout &lt;branch_name&gt;</code>: Switch to a branch.</li>
+                        <li><code>git merge &lt;branch_name&gt;</code>: Merge a branch into the current branch.</li>
+                    </ul>
+                </li>
+                <li><strong>Status and Logs:</strong>
+                    <ul>
+                        <li><code>git status</code>: Show the working tree status.</li>
+                        <li><code>git log</code>: View commit history.</li>
+                    </ul>
+                </li>
+                <li><strong>Undoing Changes:</strong>
+                    <ul>
+                        <li><code>git reset &lt;commit&gt;</code>: Reset to a specific commit.</li>
+                        <li><code>git revert &lt;commit&gt;</code>: Undo changes in a commit.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; Innomatics Research Labs © . All rights reserved by
+            <a href="https://www.linkedin.com/in/shivarth-dronachary/" target="_blank">
+                Shivarth_IN1255138
+            </a>.❤️
+        </p> 
+    </footer>
+</body>
+
+</html>

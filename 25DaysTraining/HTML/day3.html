@@ -1,0 +1,85 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Tags</title>
+</head>
+
+<body>
+    <h2>Sample Form</h2>
+    <form action="forms.md" >
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <optgroup label="Select Gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </optgroup>
+            </select><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="30"
+                placeholder="Enter your message"></textarea><br><br>
+
+            <label for="range">Select Range:</label>
+            <input type="range" id="range" name="range" min="0" max="100"><br><br>
+
+            <label for="color">Choose Color:</label>
+            <input type="color" id="color" name="color"><br><br>
+
+            <label for="date">Choose Date:</label>
+            <input type="date" id="date" name="date"><br><br>
+
+            <label for="file">Upload File:</label>
+            <input type="file" id="file" name="file"><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferences</legend>
+            <label>Subscribe:</label>
+            <input type="checkbox" id="subscribe" name="subscribe"> Yes<br><br>
+
+            <label>Choose a Number:</label>
+            <input type="number" id="number" name="number" min="1" max="10"><br><br>
+
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender_radio" value="male"> Male
+            <input type="radio" id="female" name="gender_radio" value="female"> Female<br><br>
+        </fieldset>
+
+        <label for="progress">Progress:</label>
+        <progress id="progress" value="50" max="100"></progress><br><br>
+
+        <label for="meter">Meter:</label>
+        <meter id="meter" value="75" min="0" max="100"></meter><br><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    <footer>
+        <p>&copy; Innomatics Research Labs © . All rights reserved by
+            <a href="https://www.linkedin.com/in/shivarth-dronachary/" target="_blank">
+                Shivarth_IN1255138
+            </a>.❤️
+        </p> 
+    </footer>
+</body>
+
+</html>
