@@ -1,0 +1,96 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    color: #333;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    margin: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Form Elements */
+.form-group {
+    margin: 15px 0;
+    /* height: 10px; */
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.checkbox-label {
+    display: block;
+    font-size: 16px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Button Styling */
+button {
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Result Card */
+.result-card {
+    background: #f8f9fa;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#planMessage {
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 10px;
+}

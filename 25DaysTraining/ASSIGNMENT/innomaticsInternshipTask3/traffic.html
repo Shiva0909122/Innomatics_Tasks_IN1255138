@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Traffic Light System</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Smart Traffic Light System</h2>
+    <label for="traffic-density">Select Traffic Density:</label>
+    <select id="traffic-density">
+        <option value="Heavy">Heavy Traffic</option>
+        <option value="Moderate">Moderate Traffic</option>
+        <option value="Light">Light Traffic</option>
+    </select>
+    <button onclick="startTrafficLight()" id="btn">Start</button>
+    
+    <div class="traffic-light">
+        <div class="light" id="red" style="background:red;"></div>
+        <div class="light" id="yellow"></div>
+        <div class="light" id="green"></div>
+    </div>
+    <div id="timer">Timer: 0s</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

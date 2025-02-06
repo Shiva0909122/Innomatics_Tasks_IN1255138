@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Personal Budget Tracker</h1>
+        <nav>
+            <a href="#add">Add Expense</a> | <a href="#summary">View Budget</a> | <a href="#resources">Resources</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>About This Tracker</h2>
+        <p>This budget tracker helps you manage your income and expenses efficiently. Enter your financial details below
+            and track your budget effectively.</p>
+    </section>
+
+    <section id="add">
+        <h2>Add Income/Expense</h2>
+        <form id="budgetForm">
+            <label for="income">Income:</label>
+            <input type="number" id="income" name="income" placeholder="Enter income amount"><br><br>
+
+            <label for="expense">Expense:</label>
+            <input type="number" id="expense" name="expense" placeholder="Enter expense amount"><br><br>
+
+            <label for="category">Category:</label>
+            <select id="category" name="category">
+                <option value="food">Food</option>
+                <option value="transportation">Transportation</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="others">Others</option>
+            </select><br><br>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date"><br><br>
+
+            <input type="submit" value="Add Entry">
+        </form>
+    </section>
+
+    <section id="summary">
+        <h2>Budget Summary</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody id="budgetTableBody">
+                <tr>
+                    <td>Food</td>
+                    <td>500</td>
+                    <td>2025-01-30</td>
+                    <td>Expense</td>
+                </tr>
+                <tr>
+                    <td>Salary</td>
+                    <td>5000</td>
+                    <td>2025-01-25</td>
+                    <td>Income</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="resources">
+        <h2>Budgeting Resources</h2>
+        <iframe width="100%" height="515" src="https://www.youtube.com/embed/IIKr2915l2g?si=zvY0NBmJ2xMKMxv5"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <footer>
+        <p>Personal Budget Tracker | Version 1.0 | <a href="privacy.html" target="blank">Privacy Policy</a> |  <a href="https://www.linkedin.com/in/shivarth-dronachary/" target="_blank">Shivarth_IN1255138 |</a> |<a
+                href="privacy.html" target="blank">Terms of Use</a></p>
+    </footer>
+
+    <script>
+        document.getElementById("budgetForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const income = document.getElementById("income").value;
+            const expense = document.getElementById("expense").value;
+            const category = document.getElementById("category").value;
+            const date = document.getElementById("date").value;
+
+            let amount = income ? income : expense;
+            let type = income ? "Income" : "Expense";
+
+            if (!amount || !date) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            const tableBody = document.getElementById("budgetTableBody");
+            const newRow = tableBody.insertRow();
+
+            newRow.insertCell(0).textContent = category;
+            newRow.insertCell(1).textContent = amount;
+            newRow.insertCell(2).textContent = date;
+            newRow.insertCell(3).textContent = type;
+
+            document.getElementById("budgetForm").reset();
+        });
+    </script>
+</body>
+
+</html>

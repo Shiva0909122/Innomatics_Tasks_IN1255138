@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Page in Single HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>📂 Multi-Page Loader</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#" onclick="loadPage('atm.html')">1. ATM Withdrawal System
+                </a></li>
+                <li><a href="#" onclick="loadPage('shopping.html')">2. Online Shopping Discount & Free Shipping
+                </a></li>
+                <li><a href="#" onclick="loadPage('grade.html')">3. Student Grading System with Extra Credit
+                </a></li>
+                <li><a href="#" onclick="loadPage('traffic.html')">4. Smart Traffic Light System</a></li>
+                <li><a href="#" onclick="loadPage('movie.html')"> 5. Movie Ticket Pricing with Time and Age Discount</a></li>
+                <li><a href="#" onclick="loadPage('job.html')">6. Job Application Filter</a></li>
+                <li><a href="#" onclick="loadPage('coupon.html')">7. E-commerce Coupon Redemption</a></li>
+                <li><a href="#" onclick="loadPage('fitness.html')">8. Fitness Membership Plan</a></li>
+                <li><a href="#" onclick="loadPage('electric.html')">9. Electricity Bill Calculation with Peak Hours</a></li>
+                <li><a href="#" onclick="loadPage('flight.html')">10. Flight Ticket Booking System</a></li>
+            </ul>
+        </nav>
+
+        <main id="content">
+            <p>Click on a page to load its content here.</p>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

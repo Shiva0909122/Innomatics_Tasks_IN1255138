@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Membership Plan</title>
+    <link rel="stylesheet" href="fitness.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🏋️‍♂️ Fitness Membership Plan</h1>
+        <p class="subtitle">Choose your preferences, and we’ll suggest the best plan for you!</p>
+
+        <div class="form-group">
+            <label for="planType">Select a Base Plan:</label>
+            <select id="planType">
+                <option value="Basic">Basic ($20/month) - Gym Only</option>
+                <option value="Premium">Premium ($50/month) - Gym + Trainer</option>
+                <option value="VIP">VIP ($80/month) - Gym + Trainer + Diet Plan</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="checkbox-label">
+                <input type="checkbox" id="wantsTrainer">
+                Personal Trainer
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" id="wantsDietPlan">
+                Diet Plan
+            </label>
+        </div>
+
+        <button onclick="choosePlan()" id="planBtn">Find My Plan</button>
+
+        <div id="suggestedPlan" class="result-card hidden">
+            <h2>Your Recommended Plan</h2>
+            <p id="planMessage"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

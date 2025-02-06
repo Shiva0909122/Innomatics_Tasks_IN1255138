@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Coupon Redemption</title>
+    <link rel="stylesheet" href="coupon.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Apply Your Coupon</h2>
+        <p class="info">Enter your order amount and a valid coupon to get a discount or free shipping.</p>
+
+        <label for="orderAmount">Order Amount ($):</label>
+        <input type="number" id="orderAmount" placeholder="E.g., 100, 300, 600" required>
+
+        <label for="couponCode">Coupon Code:</label>
+        <input type="text" id="couponCode" placeholder="DISCOUNT10 or FREESHIP">
+
+        <p class="coupon-info"><strong>Coupon Rules:</strong></p>
+        <ul>
+            <li><strong>DISCOUNT10:</strong> 10% off for orders above $500</li>
+            <li><strong>FREESHIP:</strong> Free shipping for orders above $200</li>
+            <li>You cannot use both coupons together.</li>
+        </ul>
+
+        <button onclick="applyCoupon()">Apply Coupon</button>
+        <p id="message"></p>
+        <h3 id="finalPrice"></h3>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

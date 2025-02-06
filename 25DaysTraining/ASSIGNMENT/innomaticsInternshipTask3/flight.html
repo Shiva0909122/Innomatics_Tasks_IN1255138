@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Ticket Fare Calculator</title>
+    <link rel="stylesheet" href="flight.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>✈️ Flight Fare Calculator</h1>
+        <p class="subtitle">Select your preferences to get the final fare.</p>
+
+        <div class="form-group">
+            <label>Select Travel Class:</label>
+            <select id="classType">
+                <option value="economy">Economy ($300 Base)</option>
+                <option value="business">Business ($300 + $200)</option>
+                <option value="first">First Class ($300 + $500)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="luggageWeight">Luggage Weight (kg):</label>
+            <input type="number" id="luggageWeight" placeholder="e.g., 25">
+        </div>
+
+        <div class="form-group">
+            <label class="checkbox-label">
+                <input type="checkbox" id="isStudent"> Student (15% Off)
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" id="isSenior"> Senior (60+ years, 10% Off)
+            </label>
+        </div>
+
+        <button onclick="calculateFlightFare()" id="calculateBtn">Calculate Fare</button>
+
+        <div id="fareResult" class="result-card hidden">
+            <h2>Your Total Fare</h2>
+            <p id="fareAmount"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

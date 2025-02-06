@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ⚡Electricity Bill Calculator</title>
+    <link rel="stylesheet" href="eletric.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>⚡ Electricity Bill Calculator</h1>
+        <p class="subtitle">Enter your consumption and time of use.</p>
+
+        <div class="form-group">
+            <label for="units">Enter Units Consumed:</label>
+            <input type="number" id="units" placeholder="e.g., 150">
+        </div>
+
+        <div class="form-group">
+            <label>Select Time of Usage:</label>
+            <select id="timeOfDay">
+                <option value="normal">8 AM - 8 PM (Normal Hours)</option>
+                <option value="peak">8 PM - 8 AM (Peak Hours +10%)</option>
+            </select>
+        </div>
+
+        <button onclick="calculateBill()" id="calculateBtn">Calculate Bill</button>
+
+        <div id="billResult" class="result-card hidden">
+            <h2>Your Electricity Bill</h2>
+            <p id="billAmount"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

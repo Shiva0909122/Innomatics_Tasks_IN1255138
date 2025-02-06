@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Pricing</title>
+   <link rel="stylesheet" href="movie.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Movie Ticket Pricing</h2>
+        <label for="age">Enter Age:</label>
+        <input type="number" id="age" min="0" required>
+        <br>
+        <label for="showTime">Enter Show Time (24-hour format, e.g., 14 for 2 PM):</label>
+        <input type="number" id="showTime" min="0" max="23" required>
+        <br>
+        <button onclick="getTicketPrice()">Calculate Price</button>
+        <h3 id="result" class="result"></h3>
+    </div>
+
+    <script src="script.js">
+      
+    </script>
+</body>
+</html>
