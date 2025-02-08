@@ -1,0 +1,420 @@
+body {
+    font-family: Inter;
+    margin: 0;
+    padding: 0;
+
+}
+
+#phone {
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+li {
+    padding: 2px;
+    font-weight: 600;
+}
+
+li:hover {
+    border-radius: 5px;
+    background-color: red;
+}
+
+.dropdown-item {
+    font-size: 12px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+}
+
+#navbar {
+    padding: 10px;
+    font-size: 20px;
+    background-color: white;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.carousel {
+    width: 100%;
+    margin-top: 200px;
+}
+
+#heading {
+    font-size: 1.75rem;
+}
+
+#logo {
+    width: 250px;
+}
+
+.hero {
+    height: 75vh;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+
+/* header */
+.highlight-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: red;
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+.btn1 {
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.btn1:hover {
+    background-color: transparent;
+
+}
+
+/* feature cards */
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 220px;
+}
+
+.feature-card i {
+    font-size: 3.5rem;
+    color: red;
+
+}
+
+
+/* TRENDING COURSES */
+
+#courses {
+    height: 80vh;
+    background-color: #000;
+    color: white;
+    text-align: center;
+}
+
+.course-card {
+    border: 1px solid white;
+    height: 430px;
+}
+
+.course-card img {
+    width: 100%;
+    height: 270px;
+}
+
+
+/* advantages */
+.custom-box {
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+}
+
+.list-unstyled li:hover {
+
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* reviews */
+#carouselExample1 {
+    width: 100%;
+    margin-top: 0px;
+}
+
+#carousel-inner {
+    border: 1px solid #000;
+    height: 350px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.carousel-item h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 100px;
+
+}
+
+/* sucess */
+.container .row #img1 {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+/* footer logo */
+footer {
+    height: fit-content;
+    background-color: #000;
+}
+
+#footer-logo {
+    width: 400px;
+}
+
+.footer-text {
+    font-size: 1.4rem;
+
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icons a:nth-child(1) {
+    background: #0077B5;
+}
+
+/* LinkedIn */
+.social-icons a:nth-child(2) {
+    background: #1877F2;
+}
+
+/* Facebook */
+.social-icons a:nth-child(3) {
+    background: #E4405F;
+}
+
+/* Instagram */
+.social-icons a:nth-child(4) {
+    background: #000;
+}
+
+/* X (Twitter) */
+.social-icons a:nth-child(5) {
+    background: #c4302b;
+}
+
+/* YouTube */
+
+.social-icons a:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+
+#footer-links li i {
+    padding: 10px;
+}
+
+ul.list-unstyled li {
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+ul.list-unstyled li:hover {
+    transform: translateX(5px);
+    color: #ffc107;
+    /* Change color on hover */
+}
+
+
+
+
+
+/* 320 to 450px */
+@media screen and (max-width: 450px) {
+    body {
+        max-width: 450px;
+
+        justify-content: center;
+        margin: 0 auto;
+
+
+    }
+
+    #contact-info {
+        font-size: 10px;
+        height: 250px;
+        width: 100%;
+
+    }
+
+    #heading {
+        text-align: center;
+        margin-left: -50px;
+    }
+
+    #logo {
+        width: 200px;
+
+    }
+
+    #phone {
+        width: 80%;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    #navbar {
+        font-size: 15px;
+        margin-top: 250px;
+    }
+
+    .carousel {
+        margin-top: 100px;
+    }
+
+    button {
+        margin-left: -40px;
+    }
+
+    /*  */
+    #header {
+        margin-top: 100px;
+        width: 100%;
+        font-size: 1.2rem;
+
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        margin-left: 1px;
+    }
+
+    #courses {
+        height: fit-content;
+        background-color: #000;
+        color: white;
+        text-align: center;
+        width: 100%;
+    }
+
+    .course-card {
+        border: 1px solid white;
+        height: 530px;
+        text-align: center;
+    }
+
+    #benefits {
+        height: 100vh;
+        display: inline;
+        text-align: center;
+        width: 100%;
+    }
+
+    .benefits-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .benefits-buttons button {
+        width: 90%;
+        margin: 5px 0;
+    }
+
+    #footer-logo {
+        width: 250px;
+    }
+
+    footer {
+        height: fit-content;
+    }
+}
+
+/* 450 to 768px */
+@media screen and (min-width: 451px) and (max-width: 768px) {
+    body {
+        max-width: 100%; /* Set max-width to 100% for better responsiveness */
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+    }
+
+    #contact-info {
+        font-size: 12px;
+        height: 15%;
+        width: 100%;
+        text-align: center; /* Centers text for better alignment */
+display: none;
+    }
+
+
+    #navbar {
+        margin-top: 0px;
+    }
+
+    #carouselExampleIndicators {
+        margin-top: 80px; /* Adjusted spacing to align properly */
+        max-width: 95%; /* Ensures it doesn’t stretch too much */
+        margin-left: auto;
+        margin-right: auto; /* Centers the carousel */    }
+
+    #courses {
+        height: fit-content;
+
+        width: 100%;
+    }
+
+    .course-card {
+        border: 1px solid white;
+        height: 530px;
+        text-align: center;
+    }
+
+    footer {
+        height: fit-content;
+        background-color: #000;
+
+    }
+
+    #footer-logo {
+        width: 220px;
+    }
+}

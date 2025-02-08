@@ -24,7 +24,7 @@ function showAlerts() {
 function displayArea() {
     let length = document.getElementById("length").value;
     let width = document.getElementById("width").value;
-    
+
     if (length === "" || width === "" || length <= 0 || width <= 0) {
         document.getElementById("areaResult").innerText = "Please enter valid positive values!";
         return;
@@ -37,7 +37,7 @@ function displayArea() {
 // Function to check if a number is even or odd and display it in the HTML
 function displayEvenOdd() {
     let number = document.getElementById("number").value;
-    
+
     if (number === "") {
         document.getElementById("evenOddResult").innerText = "Please enter a valid number!";
         return;

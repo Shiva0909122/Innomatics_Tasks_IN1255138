@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innomatics Landing Page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!--1 Navbar start -->
+    <div class="contact-info bg-danger text-white p-3 fixed-top" id="contact-info">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+                <div class="col-md-2 col-12 mb-2 mb-md-0">
+                    <h5 id="heading">Enquire Now:</h5>
+                </div>
+                <div class="col-md-3 col-sm-4 col-12 phone">
+                    <p id="phone">Hyd: 📞 99516666670</p>
+                </div>
+                <div class="col-md-3 col-sm-4 col-12 phone">
+                    <p id="phone">Pune: 📞 9951666671</p>
+                </div>
+                <div class="col-md-4 col-sm-4 col-12 phone">
+                    <p id="phone">Bengaluru: 📞 951666672</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 2 -->
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img
+                    src="https://www.innomatics.in/wp-content/uploads/2023/01/Innomatics-Logo1.png" alt="" id="logo">
+            </a>
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto" id="menu">
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+
+                            <!-- Courses Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Courses
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                                    <li><a class="dropdown-item" href="#">Data Science</a></li>
+                                    <li><a class="dropdown-item" href="#">Machine Learning</a></li>
+                                    <li><a class="dropdown-item" href="#">Artificial Intelligence</a></li>
+                                    <li><a class="dropdown-item" href="#">Deep Learning</a></li>
+
+                                    <!-- Nested Dropdown -->
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Data Science
+                                            Specializations</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Python for Data Science</a></li>
+                                            <li><a class="dropdown-item" href="#">Statistics for Data Science</a></li>
+                                            <li><a class="dropdown-item" href="#">Data Visualization</a></li>
+                                            <li><a class="dropdown-item" href="#">Big Data Analytics</a></li>
+                                            <li><a class="dropdown-item" href="#">Data Science Capstone Project</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Internship Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="internshipDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Internship
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="internshipDropdown">
+                                    <li><a class="dropdown-item" href="#">Web Development Internship</a></li>
+                                    <li><a class="dropdown-item" href="#">Data Science Internship</a></li>
+                                    <li><a class="dropdown-item" href="#">Machine Learning Internship</a></li>
+                                    <li><a class="dropdown-item" href="#">AI Internship</a></li>
+                                    <li><a class="dropdown-item" href="#">Cyber Security Internship</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- About Us Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="aboutUsDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    About Us
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="aboutUsDropdown">
+                                    <li><a class="dropdown-item" href="#">Our Story</a></li>
+                                    <li><a class="dropdown-item" href="#">Mission & Vision</a></li>
+                                    <li><a class="dropdown-item" href="#">Team</a></li>
+                                    <li><a class="dropdown-item" href="#">Careers</a></li>
+                                    <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Events Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="eventsDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Events
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
+                                    <li><a class="dropdown-item" href="#">Workshops</a></li>
+                                    <li><a class="dropdown-item" href="#">Webinars</a></li>
+                                    <li><a class="dropdown-item" href="#">Hackathons</a></li>
+                                    <li><a class="dropdown-item" href="#">Meetups</a></li>
+                                    <li><a class="dropdown-item" href="#">Conferences</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item"><a class="nav-link btn1 btn-danger" href="#">💰 Pay Now</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+        </div>
+    </nav>
+    <!-- Navbar close -->
+
+    <!-- Carosuel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                aria-label="Slide 6"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./Assets/1.png" class="d-block w-100" alt="First Slide">
+            </div>
+            <div class="carousel-item">
+                <img src="./Assets/Screenshot 2025-02-05 122920.png" class="d-block w-100" alt="Second Slide">
+            </div>
+            <div class="carousel-item">
+                <img src="./Assets/Screenshot 2025-02-05 122755.png" class="d-block w-100" alt="Third Slide">
+            </div>
+            <div class="carousel-item">
+                <img src="./Assets/Screenshot 2025-02-05 122817.png" class="d-block w-100" alt="Fourth Slide">
+            </div>
+            <div class="carousel-item">
+                <img src="./Assets/Screenshot 2025-02-05 122835.png" class="d-block w-100" alt="Fifth Slide">
+            </div>
+            <div class="carousel-item">
+                <img src="./Assets/Screenshot 2025-02-05 122903.png" class="d-block w-100" alt="Sixth Slide">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Carosuel done -->
+
+
+    <!-- header -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Left Section -->
+            <div class="col-lg-6" id="header">
+                <h2><b>We just don’t train,</b><br>We transform the careers</h2>
+                <p><b>Innomatics Research Labs</b> is a pioneer in <b>"Transforming Careers and Lives"</b> of
+                    individuals in the Digital Space by catering advanced training on <span
+                        class="highlight-text">NASSCOM Future Skills Prime Certified Data Science,</span><span> Python,
+                        Predictive
+                        Analytics Modeler, Machine Learning, Artificial Intelligence (AI), Generative AI, Full-stack web
+                        development</span> and <b>Career Launching Program</b> for students.</p>
+
+                <h5 class="highlight-text">NASSCOM Futureskills Prime Registered Business Partner</h5>
+                <p>As an authorized <b>NASSCOM FutureSkills Prime Training Partner</b>, we provide real-world learning
+                    through case studies, <b>hackathons, workshops, and meetups</b> to ensure job-ready skills. We
+                    collaborate with <b>100+ companies</b> for placements.</p>
+
+                <h5 class="highlight-text">Best Edtech company</h5>
+                <p>Recognized by <b>Times of India</b> as the Best Training Institute in Hyderabad for Data Science &
+                    Digital Marketing, we have trained and placed <b>10,000+</b> students. With <b>350+</b> batches,
+                    <b>70+</b> hackathons,
+                    <b>500+</b> industry experts,<b>500+</b> webinars, and <b>500+</b> hiring partners, we focus on
+                    practical learning and
+                    skill development through advanced classrooms and modern training methods.
+                </p>
+                <button class="btn">View More</button>
+            </div>
+
+            <!-- Right Section -->
+            <div class="col-lg-6">
+                <BR></BR>
+                <h3 class="section-title text-center mb-4"><b>WHAT WE ARE?</b></h3>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <i class="fas fa-users"></i>
+                            <h5>Global Leaders in training</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <i class="fas fa-laptop-code"></i>
+                            <h5>Practical oriented approach</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <i class="fas fa-briefcase"></i>
+                            <h5>Hands-on projects & Internship</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <i class="fas fa-award"></i>
+                            <h5>100% Placement Assistance</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- cards -->
+    <div class="container py-5" id="courses">
+        <h2 class="text-center mb-4">Trending Courses of 2025</h2>
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="course-card">
+                    <img src="https://www.innomatics.in/wp-content/uploads/2023/01/No-1-best-data-science-course-training-institute-in-hyderabad.jpg"
+                        alt="NASSCOM Futureskills Prime Certified Data Science">
+                    <div class="card-body">
+                        <h5 class="card-title">NASSCOM Futureskills Prime <br> Certified Data Science</h5>
+                        <p class="card-text">This is a great choice for tech geeks, students, working professionals and
+                            aspiring data scientists who want to upskill and build a better foundation is the stream of
+                            Data Science.</p>
+                        <button class="btn-read-more">Read More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="course-card">
+                    <img src="https://www.innomatics.in/wp-content/uploads/2025/01/FULL-STACK-WEB.jpg"
+                        alt="Full Stack Development">
+                    <div class="card-body">
+                        <h5 class="card-title">Full Stack Development</h5>
+                        <p class="card-text">Learn the right skills to break into a development career & advance
+                            yourself as a full-stack Developer. It includes Frontend, Backend, databases, debugging &
+                            testing.</p> <br>
+                        <button class="btn-read-more">Read More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="course-card">
+                    <img src="https://www.innomatics.in/wp-content/uploads/2025/01/WhatsApp-Image-2025-01-17-at-11.49.18.jpeg"
+                        alt="Generative AI">
+                    <div class="card-body">
+                        <h5 class="card-title">Generative AI</h5>
+                        <p class="card-text">Generative AI Course at Innomatics is perfect for students, job seekers,
+                            entrepreneurs, and professionals who want to learn the latest AI tools and skills to grow in
+                            their careers.</p> <br>
+
+
+                        <button class="btn-read-more">Read More</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Advantages List -->
+    <div class="container py-5">
+        <div class="row">
+
+            <div class="col-md-6">
+                <h2 class="text-center">Advantages of training at Innomatics</h2>
+                <div class="custom-box">
+                    <ul class="list-unstyled">
+                        <li>✔ Flexible Online Live and Classroom Training</li>
+                        <li>✔ 100% Internship guarantee program</li>
+                        <li>✔ Dedicated Placement vertical</li>
+                        <li>✔ Mastery level certifications that are globally accepted</li>
+                        <li>✔ Backup Classes & Lifetime LMS access</li>
+                        <li>✔ Completely Practical Oriented Approach</li>
+                        <li>✔ Hands-on training on the capstone projects</li>
+                        <li>✔ Bi-weekly connects from industry experts</li>
+                        <li>✔ Domain Teach back and Reverse Presentations</li>
+                        <li>✔ Free Technical Support & Career Counselling</li>
+                        <li>✔ Expert mentoring, Weekly Tests & Assignments</li>
+                        <li>✔ Mock-up Exams, and Interviews</li>
+                        <li>✔ Meet-ups, Workshops, Hackathons & Conferences</li>
+                        <li>✔ Exclusive programs for Non-IT professionals</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Video Section -->
+            <div class="col-md-6 video-container">
+                <h2>Let’s Watch a Video Bite From Our Institute</h2>
+                <div class="custom-box">
+                    <iframe width="630" height="325" src="https://www.youtube.com/embed/OKUFrW40xyI?si=zLRlBRjsT4fYHxUA"
+                        title="YouTube video player" frameborder="1"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <br>
+                <a href="https://www.youtube.com/channel/YOUR_CHANNEL_ID" target="_blank" class="btn btn-custom">Watch
+                    More Videos</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Training Benefits Section -->
+    <section class="text-center py-5" id="benefits">
+        <h2>Why People Choose Our Training</h2>
+        <div class="d-flex flex-wrap flex-md-nowrap justify-content-center">
+            <button class="btn btn-danger m-2 w-100 w-md-auto" onclick="showContent('trainers')">EXPERT TRAINERS</button>
+            <button class="btn btn-dark m-2 w-100 w-md-auto" onclick="showContent('projects')">CAPSTONE PROJECTS</button>
+            <button class="btn btn-dark m-2 w-100 w-md-auto" onclick="showContent('internship')">INHOUSE INTERNSHIP</button>
+            <button class="btn btn-dark m-2 w-100 w-md-auto" onclick="showContent('placements')">PLACEMENTS</button>
+        </div>
+        
+        <div class="container mt-4">
+            <div class="row align-items-center">
+                <div id="trainers" class="content-box col-12 d-none">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="https://www.innomatics.in/wp-content/uploads/2024/12/WEB-IMAGE-1.png"
+                                class="img-fluid" alt="Expert Trainers">
+                        </div>
+                        <div class="col-md-8">
+                            <p>Innomatics explored all over India to get the best trainers and succeeded with it. We
+                                have a pool of trainers working with highly qualified business partners and fortune
+                                companies to provide advanced and comprehensive training.
+
+                            </p>
+                            <p>They curate the course content with an eye on the industry needs and standards to make
+                                students skilful and champions in solving the complex challenges of the industry.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="projects" class="content-box col-12 d-none">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="http://innomatics.in/wp-content/uploads/2023/01/Live-Projects.png"
+                                class="img-fluid" alt="Capstone Projects">
+                        </div>
+                        <div class="col-md-8">
+                            <p>At Innomatics, we believe in a practical learning approach. Making students work on
+                                real-time data helps in giving them a clear visualization of how it is applied in the
+                                real world.
+
+                            </p>
+                            <p>Considering this, we follow a collaborative group-oriented approach to learn with
+                                discussion forums and get hands-on with capstone projects to make our trainees good team
+                                players and strong thinkers to solve problems.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="internship" class="content-box col-12 d-none">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="http://innomatics.in/wp-content/uploads/2023/01/In-House-Internship.jpg"
+                                class="img-fluid" alt="Inhouse Internship">
+                        </div>
+                        <div class="col-md-8">
+                            <p>Internships aren’t just about ground work at Innomatics. We believe that with the right
+                                program, One can develop young talents and lay a foundation for recruiting brilliant
+                                young minds to work for any organization.
+
+                            </p>
+                            <p>We do provide paid/unpaid internship programs that offer the opportunity to edge out
+                                larger competitors by providing interns with opportunities to conquer the business
+                                challenges.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="placements" class="content-box col-12 d-none">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="http://innomatics.in/wp-content/uploads/2023/01/Placement-Assistance.jpg"
+                                class="img-fluid" alt="Placements">
+                        </div>
+                        <div class="col-md-8">
+                            <p>We have a collaboration with over 100+ MNCs and SMEs who directly source their business
+                                requirements through Innomatics. Also having a dedicated placement verticle that enables
+                                trainees to take advantage and excel in the career with extensive knowledge gained at
+                                Innomatics.
+
+                            </p>
+                            <p>For the benefit of the students to face the real challenges, we conduct mockup interviews
+                                with instant feedback,1-1 mentorship, provide extensive support to the Learning
+                                Management System
+                                (LMS) where they can access the classes and stay updated, attend career fairs,
+                                Hackathons, workshops and meetups with leading industry experts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showContent(id) {
+            document.querySelectorAll('.content-box').forEach(box => {
+                box.classList.add('d-none');
+            });
+            document.getElementById(id).classList.remove('d-none');
+        }
+    </script>
+
+
+    <!-- Student Reviews Section -->
+    <section class="text-center bg-light py-5">
+        <h2><b>A few reviews from our students</b></h2>
+        <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carousel-inner">
+                <div class="carousel-item active">
+                    <h3>Sindhuja</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️
+
+                    </p>
+                    <p>Innomatics is one of the best places to gain knowledge on data science and also get certified
+                        through Nasscom which can help in getting the right jobs from top companies. <br> Tutors will
+                        teach
+                        you with real-time examples to understand the concepts in an easy way. Special thanks to Vaibav
+                        Sir who taught each concept very clearly.
+
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <h3>Rahul</h3>
+                    <p>⭐️⭐️⭐️⭐️
+
+                    </p>
+                    <p>
+                        Innomatics Research Labs is the Best platform to transform our career, here I have done a Data
+                        analytics course, and was recently placed in a company. <br>
+                        Here they provides Excellent quality education and practice or doubt Sessions. and conducts so
+                        many Hackathons to enhance our skills. I personally like the LMS facility which is lifetime.
+                        Here we can see all our class recordings throughout the course. <br>
+                        Faculty and staff are so friendly. They will guide us until we get placed.
+
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <h3>Priya</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️
+
+                    </p>
+                    <p>
+                        HEY! I am Priya student of the innomatics research labs .. I love the innomatics research lab
+                        because the mentors and trainers help me a lot in any query in the course. <br> If anyone
+                        looking for
+                        data science in the market, I can say innomatics is one of the best institutes.
+
+                    </p>
+
+                </div>
+                <div class="carousel-item">
+                    <h3>Vikram</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️
+
+                    </p>
+                    <p>I am incredibly grateful to my institute for the invaluable support they provided in my job
+                        search journey. The guidance and resources they offered were instrumental in helping me secure a
+                        job. I want to express my special thanks to our HR executive, Sai Kiran Rodda, whose assistance
+                        was pivotal. <br> His dedication and expertise made the entire process seamless, enabling me to
+                        transition smoothly into my new role. I highly recommend this institute to anyone seeking not
+                        only quality education but also excellent career support. <br>Thank you for making a significant
+                        difference in my life!
+
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <h3>Ananya</h3>
+                    <p>⭐️⭐️⭐️⭐️
+
+                    </p>
+                    <p>The placement support team was very helpful, and I landed a great job after completing my
+                        training..Here they provides Excellent quality education and practice or doubt Sessions. and
+                        conducts so many Hackathons to enhance our skills. <br> I personally like the LMS facility which
+                        is
+                        lifetime. Here we can see all our class recordings throughout the course.
+                        .</p>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div> <br>
+        <button class="btn">Read More</button>
+
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="text-center py-5">
+        <h2>Here Are Some Of Our Success Stories</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="https://www.innomatics.in/wp-content/uploads/2024/11/Aaesha_Azeemuddin-400x516.jpg"
+                        class="img-fluid" alt="Success Story" id="img1">
+                    <p>AAESHA AZEEMUDDIN - Software Engineer</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="https://www.innomatics.in/wp-content/uploads/2024/11/Alladi_Ranjith-400x516.jpg"
+                        class="img-fluid" alt="Success Story" id="img1">
+                    <p>ALLADI RANJITH - Associate Data Scientist</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="https://www.innomatics.in/wp-content/uploads/2024/11/Cherukupalli_Indhu-400x516.jpg"
+                        class="img-fluid" alt="Success Story" id="img1">
+                    <p>CHERUKUPALLI INDHU - Associate Data Scientist</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="https://www.innomatics.in/wp-content/uploads/2024/11/G._Venkata_Mareswararao-400x516.jpg"
+                        class="img-fluid" alt="Success Story" id="img1">
+                    <p>G. VENKATA MARESWARRAO - Software Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- blog updates -->
+    <div class="container mt-5">
+        <h2 class="text-center "><b>Read Latest Business News & Blog updates</b></h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.innomatics.in/wp-content/uploads/2023/08/banner-1-1-400x250.jpg"
+                        class="card-img-top" alt="Python OOPS">
+                    <div class="card-body">
+                        <h5 class="card-title">OOPS Concepts in Python: Part 1</h5>
+                        <p class="card-text">Class, Objects, Constructor, Methods in Python...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.innomatics.in/wp-content/uploads/2023/04/Real-world-Applications-of-Data-Science-400x250.png"
+                        class="card-img-top" alt="Data Science">
+                    <div class="card-body">
+                        <h5 class="card-title">Real-world Applications of Data Science</h5>
+                        <p class="card-text">Data science is a field that has emerged as an...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.innomatics.in/wp-content/uploads/2021/10/web-site-blog-1-1-400x250.jpg"
+                        class="card-img-top" alt="Join Innomatics">
+                    <div class="card-body">
+                        <h5 class="card-title">Why should you join Innomatics?</h5>
+                        <p class="card-text">At Innomatics we believe in looking at the...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 p-4">
+        <div class="container">
+            <div class="row gy-4"> <!-- Added 'gy-4' for spacing on small screens -->
+                <div class="col-lg-4 col-md-12 text-center text-md-start">
+                    <img src="https://www.innomatics.in/wp-content/uploads/2023/01/innomatics-footer-logo.png" alt="Logo" id="footer-logo">
+                    <p class="footer-text">A leading training institute, Innomatics Research Labs offers courses in 
+                        areas such as <span class="text-danger fw-bold">Data Science,</span> Python, AI, Data 
+                        Analytics, <span class="text-danger fw-bold">Full Stack Development,</span> and 
+                        <span class="text-danger fw-bold">Generative AI.</span> Our practical 
+                        training is meticulously designed to meet industry needs and provide certification upon completion.
+                    </p>
+                    <div class="social-icons d-flex justify-content-center gap-3">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4 col-md-12 text-center text-md-start">
+                    <h5 class="text-danger mb-3">📚 Courses</h5>
+                    <ul class="list-unstyled" id="footer-links">
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Data Science</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Artificial Intelligence</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Deep Learning</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Big Data Analytics</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Full Stack Web Developer</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Digital Marketing</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Generative AI</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Machine Learning</li>
+                        <li><i class="fas fa-user-tie text-primary me-2"></i> Placements</li>
+                        <li><i class="fas fa-handshake text-warning me-2"></i> Partner with us</li>
+                        <li><i class="fas fa-lock text-danger me-2"></i> Privacy Policy</li>
+                    </ul>
+                </div>
+    
+                <div class="col-lg-4 col-md-12 text-center text-md-start">
+                    <h5 class="mb-3 text-danger">Contact Us</h5>
+    
+                    <p><i class="fas fa-map-marker-alt text-danger me-2"></i>
+                        <strong>Kukatpally — Hyderabad</strong><br>
+                        #205, 2nd Floor, Fortune Signature, Near JNTU Metro Station, Kukatpally, Hyderabad, Telangana
+                        500085<br>
+                        Call us: <a href="tel:+919951666670" class="text-white">+91-9951666670</a>
+                    </p>
+    
+                    <p><i class="fas fa-map-marker-alt text-danger me-2"></i>
+                        <strong>Pune</strong><br>
+                        2nd Floor, Sai Sayaji Apartment, 201 Paud Rd, beside VANAJ Metro, above Bata showroom,
+                        Ramkrishna Paramhans Nagar, Kothrud, Pune, Maharashtra 411038<br>
+                        Call us: <a href="tel:+919951666671" class="text-white">+91-9951666671</a>
+                    </p>
+    
+                    <p><i class="fas fa-map-marker-alt text-danger me-2"></i>
+                        <strong>Bengaluru</strong><br>
+                        NO.576/B, 3rd FLOOR, Swetha Arcade, Service Road, 100 FT ROAD, 6TH SECTOR, Hsr Layout,
+                        Bengaluru, Karnataka 560068<br>
+                        Call us: <a href="tel:+919951666672" class="text-white">+91-9951666672</a>
+                    </p>
+    
+                    <h5 class="mt-4">📞 Phone/Whatsapp:</h5>
+                    <p>
+                        <i class="fas fa-phone-alt text-success me-2"></i>
+                        <a href="tel:+919951666670" class="text-white">+91-9951666670</a> /
+                        <a href="tel:+919951666671" class="text-white">+91-9951666671</a> /
+                        <a href="tel:+919951666672" class="text-white">+91-9951666672</a>
+                    </p>
+    
+                    <h5 class="mt-4">✉️ Email Us:</h5>
+                    <p>
+                        <i class="fas fa-envelope text-warning me-2"></i>
+                        <a href="mailto:Admissions@innomatics.in" class="text-white">Admissions@innomatics.in</a>
+                    </p>
+                </div>
+    
+            </div>
+        </div>
+    </footer>
+    
+    <p class="text-center mt-3">
+        &copy; 2025 Innomatics Research Labs. All rights reserved by
+        <a href="https://www.linkedin.com/in/shivarth-dronachary/" target="_blank" class="text-primary fw-bold">
+            Shivarth_IN1255138
+        </a> ❤️
+    </p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

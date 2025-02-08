@@ -136,6 +136,8 @@ a:hover {
     word-spacing: 4px;
     letter-spacing: 3px;
     box-shadow: 0 5px 20px #ddd;
+    background: -webkit-linear-gradient(#e8f5e9, #b2dfdb);
+    color: red;
 }
 
 @media (max-width: 28.75em) {
@@ -183,7 +185,7 @@ a:hover {
 .project-image {
     height: calc(100% - 6.8rem);
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
     border-top-right-radius: 28px;
     border-top-left-radius: 28px;
 }
