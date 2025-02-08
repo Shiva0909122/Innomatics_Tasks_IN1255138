@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array Methods Demo</h1>
+    <p>Array operations will be displayed below:</p>
+    <button onclick="addElement()">Push</button>
+    <button onclick="removeElement()">Pop</button>
+    <button onclick="unshiftElement()">Unshift</button>
+    <button onclick="shiftElement()">Shift</button>
+    <button onclick="spliceElements()">Splice</button>
+    <button onclick="sliceElements()">Slice</button>
+    <button onclick="searchIndex()">IndexOf</button>
+    <button onclick="searchLastIndex()">LastIndexOf</button>
+    <button onclick="checkIncludes()">Includes</button>
+    <button onclick="findElement()">Find</button>
+    <button onclick="findIndexElement()">FindIndex</button>
+    <button onclick="filterElements()">Filter</button>
+    <button onclick="sortElements()">Sort</button>
+    <button onclick="reverseElements()">Reverse</button>
+    
+    <div id="output"></div>
+    
+    <script>
+        let array = [10, 20, 30, 40, 50];
+        
+        function updateOutput(message) {
+            document.getElementById('output').innerHTML = "<p>Array: " + JSON.stringify(array) + "</p><p>" + message + "</p>";
+        }
+        
+        function addElement() {
+            array.push(60);
+            updateOutput("Added 60");
+        }
+        
+        function removeElement() {
+            array.pop();
+            updateOutput("Removed last element");
+        }
+        
+        function unshiftElement() {
+            array.unshift(5);
+            updateOutput("Added 5 at beginning");
+        }
+        
+        function shiftElement() {
+            array.shift();
+            updateOutput("Removed first element");
+        }
+        
+        function spliceElements() {
+            array.splice(2, 1, 99);
+            updateOutput("Spliced at index 2 with 99");
+        }
+        
+        function sliceElements() {
+            let newArray = array.slice(1, 3);
+            updateOutput("Sliced elements: " + JSON.stringify(newArray));
+        }
+        
+        function searchIndex() {
+            updateOutput("Index of 30: " + array.indexOf(30));
+        }
+        
+        function searchLastIndex() {
+            updateOutput("Last Index of 30: " + array.lastIndexOf(30));
+        }
+        
+        function checkIncludes() {
+            updateOutput("Includes 20: " + array.includes(20));
+        }
+        
+        function findElement() {
+            updateOutput("First element > 25: " + array.find(num => num > 25));
+        }
+        
+        function findIndexElement() {
+            updateOutput("Index of first element > 25: " + array.findIndex(num => num > 25));
+        }
+        
+        function filterElements() {
+            updateOutput("Elements > 25: " + JSON.stringify(array.filter(num => num > 25)));
+        }
+        
+        function sortElements() {
+            array.sort((a, b) => a - b);
+            updateOutput("Sorted array");
+        }
+        
+        function reverseElements() {
+            array.reverse();
+            updateOutput("Reversed array");
+        }
+        
+        updateOutput("Initial array");
+    </script>
+</body>
+</html>

@@ -291,7 +291,7 @@ if (userName) {
 
 # <===================================================>
 
-# Day 7: JavaScript Functions and Variables**
+# Day (7): JavaScript Functions and Variables**
 
 ## Overview
 This document covers the fundamentals of JavaScript functions and variables. You will learn how to declare variables using `var`, `let`, and `const`, and how to define and use functions, including function declarations, parameters, return values, and arrow functions.
@@ -357,3 +357,48 @@ console.log("Multiplication:", multiply(4, 3));
 # <===================================================>
 
 
+# DAY (8) Array Methods Demo
+
+## Description
+This project demonstrates various JavaScript array methods through an interactive webpage. Users can manipulate an array using buttons, with results displayed on the page and logged to the console.
+
+## Features
+- **Adding & Removing Elements:**
+  - `push()`: Adds an element to the end.
+  - `pop()`: Removes the last element.
+  - `unshift()`: Adds an element to the beginning.
+  - `shift()`: Removes the first element.
+  - `splice()`: Modifies the array by adding/removing elements.
+  - `slice()`: Creates a shallow copy of a portion of the array.
+
+- **Searching & Filtering:**
+  - `indexOf()`: Finds the index of an element.
+  - `lastIndexOf()`: Finds the last occurrence index of an element.
+  - `includes()`: Checks if an element exists.
+  - `find()`: Finds the first element matching a condition.
+  - `findIndex()`: Finds the index of the first element matching a condition.
+  - `filter()`: Filters elements based on a condition.
+
+- **Sorting & Reversing:**
+  - `sort()`: Sorts the array.
+  - `reverse()`: Reverses the array.
+
+# <===================================================>
+
+# DAY ( 9 ) JavaScript Concepts Demonstration
+
+This project demonstrates various JavaScript concepts, including array methods (`map`, `forEach`, `filter`, and `reduce`), event handling, functions, and objects.
+
+## Features
+- **Map:** Multiplies each element in an array by 2.
+- **ForEach:** Logs each element in the array.
+- **Filter:** Filters elements greater than 3.
+- **Reduce:** Calculates the sum of all elements.
+- **Objects & Methods:** Displays an object's properties and calls a method to generate a greeting.
+
+## Usage
+1. Open the `index.html` file in a browser.
+2. Click the buttons to execute the different JavaScript functions.
+3. View the results displayed in the output section.
+
+# <===================================================>

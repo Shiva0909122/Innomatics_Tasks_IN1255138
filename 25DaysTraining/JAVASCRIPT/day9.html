@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Concepts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: inline-block;
+            min-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h2>JavaScript Concepts</h2>
+    <p>Click a button to see the result:</p>
+    <button onclick="useMap()">Map (x2)</button>
+    <button onclick="useForEach()">ForEach (Log)</button>
+    <button onclick="useFilter()">Filter (> 3)</button>
+    <button onclick="useReduce()">Reduce (Sum)</button>
+    <button onclick="showObject()">Show Object</button>
+    <div id="output">Result here</div>
+    
+    <script>
+        const numbers = [1, 2, 3, 4, 5];
+        const outputDiv = document.getElementById('output');
+
+        function useMap() {
+            const result = numbers.map(num => num * 2);
+            outputDiv.innerText = `Map: ${result.join(', ')}`;
+        }
+
+        function useForEach() {
+            let result = '';
+            numbers.forEach(num => result += num + ' ');
+            outputDiv.innerText = `ForEach: ${result}`;
+        }
+
+        function useFilter() {
+            const result = numbers.filter(num => num > 3);
+            outputDiv.innerText = `Filter: ${result.join(', ')}`;
+        }
+
+        function useReduce() {
+            const result = numbers.reduce((acc, num) => acc + num, 0);
+            outputDiv.innerText = `Reduce: ${result}`;
+        }
+
+        function showObject() {
+            const person = {
+                name: "Shivarth",
+                age: 23,
+                job: "Developer",
+                greet: function() {
+                    return `Hello, my name is ${this.name} and I am a ${this.job}.`;
+                }
+            };
+            outputDiv.innerText = person.greet();
+        }
+    </script>
+</body>
+</html>
