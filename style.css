@@ -183,7 +183,7 @@ a:hover {
 }
 
 .project-image {
-    height: calc(100% - 6.8rem);
+    height: 250px;
     width: 100%;
     object-fit: fill;
     border-top-right-radius: 28px;
