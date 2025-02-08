@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,13 @@
             text-align: center;
             margin: 20px;
         }
+
         button {
             margin: 5px;
             padding: 10px;
             cursor: pointer;
         }
+
         #output {
             margin-top: 20px;
             padding: 10px;
@@ -24,6 +27,7 @@
         }
     </style>
 </head>
+
 <body>
     <h2>JavaScript Concepts</h2>
     <p>Click a button to see the result:</p>
@@ -33,7 +37,7 @@
     <button onclick="useReduce()">Reduce (Sum)</button>
     <button onclick="showObject()">Show Object</button>
     <div id="output">Result here</div>
-    
+
     <script>
         const numbers = [1, 2, 3, 4, 5];
         const outputDiv = document.getElementById('output');
@@ -64,7 +68,7 @@
                 name: "Shivarth",
                 age: 23,
                 job: "Developer",
-                greet: function() {
+                greet: function () {
                     return `Hello, my name is ${this.name} and I am a ${this.job}.`;
                 }
             };
@@ -72,4 +76,5 @@
         }
     </script>
 </body>
+
 </html>
