@@ -42,7 +42,8 @@ function renderProducts(productsToRender = products) {
                     <h5 class="card-title">${product.name}</h5>
                     <p class="product-price mb-3">₹${product.price.toFixed(2)}</p>
                     <p class="product-category mb-3">${product.category}</p>
-                    
+<p class="product-description mb-3">${product.description}</p>
+
                     <button class="btn btn-primary add-to-cart-btn" id="add-to-cart-btn-${product.product_id}" onclick="addToCart(${product.product_id})">
                         ${inCart ? `Added (${inCart.quantity})` : 'Add to Cart'}
                     </button>
