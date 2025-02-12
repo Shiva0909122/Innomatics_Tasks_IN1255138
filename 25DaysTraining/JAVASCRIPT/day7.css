@@ -1,55 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 30px;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 30px;
-        }
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    width: 350px;
+}
 
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            display: inline-block;
-            width: 350px;
-        }
+h2 {
+    color: #333;
+}
 
-        h2 {
-            color: #333;
-        }
+label,
+input {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+}
 
-        label, input {
-            display: block;
-            margin: 10px auto;
-            width: 80%;
-        }
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
-        input {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 85%;
+}
 
-        button {
-            padding: 10px;
-            font-size: 16px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 10px;
-            width: 85%;
-        }
+button:hover {
+    background-color: #218838;
+}
 
-        button:hover {
-            background-color: #218838;
-        }
+p {
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
 
-        p {
-            font-weight: bold;
-            color: #333;
-            margin-top: 10px;
-        }
-    
+footer {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 1em;
+
+    bottom: 0;
+
+    animation: fadeInUp 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

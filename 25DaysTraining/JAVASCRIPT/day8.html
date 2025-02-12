@@ -18,7 +18,26 @@
         #output {
             margin-top: 20px;
             font-weight: bold;
+        }    footer {
+            text-align: center;
+            background-color: #f1f1f1;
+            padding: 1em;
+
+            bottom: 0;
+
+            animation: fadeInUp 2s;
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -40,7 +59,13 @@
     <button onclick="reverseElements()">Reverse</button>
     
     <div id="output"></div>
-    
+    <footer>
+        <p>&copy; Innomatics Research Labs © . All rights reserved by
+            <a href="https://www.linkedin.com/in/shivarth-dronachary/" target="_blank">
+                Shivarth_IN1255138
+            </a>.❤️
+        </p> 
+    </footer>
     <script>
         let array = [10, 20, 30, 40, 50];
         

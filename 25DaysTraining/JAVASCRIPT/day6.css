@@ -26,3 +26,22 @@ button {
 button:hover {
     background-color: #218838;
 }
+footer {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 1em;
+
+    bottom: 0;
+
+    animation: fadeInUp 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

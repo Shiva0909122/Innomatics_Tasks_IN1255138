@@ -24,7 +24,26 @@
             border: 1px solid #ccc;
             display: inline-block;
             min-width: 200px;
+        }    footer {
+            text-align: center;
+            background-color: #f1f1f1;
+            padding: 1em;
+
+            bottom: 0;
+
+            animation: fadeInUp 2s;
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
     </style>
 </head>
 
@@ -37,7 +56,13 @@
     <button onclick="useReduce()">Reduce (Sum)</button>
     <button onclick="showObject()">Show Object</button>
     <div id="output">Result here</div>
-
+    <footer>
+        <p>&copy; Innomatics Research Labs © . All rights reserved by
+            <a href="https://www.linkedin.com/in/shivarth-dronachary/" target="_blank">
+                Shivarth_IN1255138
+            </a>.❤️
+        </p> 
+    </footer>
     <script>
         const numbers = [1, 2, 3, 4, 5];
         const outputDiv = document.getElementById('output');
