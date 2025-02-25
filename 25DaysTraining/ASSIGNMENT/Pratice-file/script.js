@@ -118,6 +118,7 @@ window.updateQuantity = function (productId, change) {
 //         renderProducts(); // Update product buttons
 //     }
 // }
+
 async function handleCheckout() {
     if (cart.length === 0) {
         alert('Your cart is empty!');
