@@ -1,0 +1,490 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-light text-dark font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+
+  ::selection {
+    @apply bg-primary/30 text-dark;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-md font-medium transition-all duration-300 inline-flex items-center gap-2 relative overflow-hidden;
+  }
+  
+  .btn::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full bg-white/20 transform -translate-x-full skew-x-12 transition-transform duration-700 ease-out z-0;
+  }
+  
+  .btn:hover::before {
+    @apply transform translate-x-0;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-secondary;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 relative inline-block;
+  }
+  
+  .section-title::after {
+    @apply content-[''] absolute -bottom-2 left-0 w-1/2 h-1 bg-primary rounded-full;
+  }
+  
+  .skill-card {
+    @apply bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center gap-2 relative overflow-hidden;
+  }
+
+  .skill-card::before {
+    @apply content-[''] absolute -right-12 -top-12 w-24 h-24 bg-primary/10 rounded-full transition-all duration-500;
+  }
+
+  .skill-card:hover::before {
+    @apply scale-[2.5];
+  }
+  
+  .project-card {
+    @apply bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 relative;
+  }
+
+  .glitch-effect {
+    position: relative;
+  }
+  
+  .glitch-effect::before,
+  .glitch-effect::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .glitch-effect::before {
+    left: 2px;
+    text-shadow: -1px 0 #ff00c1;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim-1 5s infinite linear alternate-reverse;
+  }
+  
+  .glitch-effect::after {
+    left: -2px;
+    text-shadow: -1px 0 #00fff9;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim-2 5s infinite linear alternate-reverse;
+  }
+  
+  @keyframes glitch-anim-1 {
+    0% {
+      clip: rect(2px, 9999px, 28px, 0);
+    }
+    10% {
+      clip: rect(42px, 9999px, 73px, 0);
+    }
+    20% {
+      clip: rect(61px, 9999px, 78px, 0);
+    }
+    30% {
+      clip: rect(15px, 9999px, 13px, 0);
+    }
+    40% {
+      clip: rect(26px, 9999px, 48px, 0);
+    }
+    50% {
+      clip: rect(42px, 9999px, 46px, 0);
+    }
+    60% {
+      clip: rect(67px, 9999px, 11px, 0);
+    }
+    70% {
+      clip: rect(72px, 9999px, 5px, 0);
+    }
+    80% {
+      clip: rect(61px, 9999px, 98px, 0);
+    }
+    90% {
+      clip: rect(34px, 9999px, 23px, 0);
+    }
+    100% {
+      clip: rect(82px, 9999px, 31px, 0);
+    }
+  }
+  
+  @keyframes glitch-anim-2 {
+    0% {
+      clip: rect(82px, 9999px, 59px, 0);
+    }
+    10% {
+      clip: rect(33px, 9999px, 5px, 0);
+    }
+    20% {
+      clip: rect(31px, 9999px, 16px, 0);
+    }
+    30% {
+      clip: rect(91px, 9999px, 98px, 0);
+    }
+    40% {
+      clip: rect(16px, 9999px, 69px, 0);
+    }
+    50% {
+      clip: rect(2px, 9999px, 28px, 0);
+    }
+    60% {
+      clip: rect(92px, 9999px, 64px, 0);
+    }
+    70% {
+      clip: rect(59px, 9999px, 75px, 0);
+    }
+    80% {
+      clip: rect(23px, 9999px, 34px, 0);
+    }
+    90% {
+      clip: rect(16px, 9999px, 77px, 0);
+    }
+    100% {
+      clip: rect(81px, 9999px, 33px, 0);
+    }
+  }
+
+  .neon-text {
+    text-shadow: 0 0 5px rgba(14, 165, 233, 0.3),
+                 0 0 10px rgba(14, 165, 233, 0.3),
+                 0 0 15px rgba(14, 165, 233, 0.3),
+                 0 0 20px rgba(14, 165, 233, 0.3);
+  }
+
+  .neon-box {
+    box-shadow: 0 0 5px rgba(14, 165, 233, 0.3),
+                0 0 10px rgba(14, 165, 233, 0.3),
+                0 0 15px rgba(14, 165, 233, 0.3);
+  }
+
+  .gradient-border {
+    position: relative;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #0ea5e9, #0369a1, #0ea5e9);
+    z-index: -1;
+    border-radius: 0.5rem;
+    animation: border-animation 3s linear infinite;
+  }
+  
+  @keyframes border-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animated-bg {
+    background: linear-gradient(-45deg, #0ea5e9, #0369a1, #0284c7, #0369a1);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(14, 165, 233, 0.7);
+  }
+
+  .card-hover-effect {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card-hover-effect:hover {
+    transform: translateY(-10px) scale(1.02);
+  }
+
+  .cyber-btn {
+    position: relative;
+    background: #0ea5e9;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .cyber-btn::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: 50%;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .cyber-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    background: #0369a1;
+    transition: all 0.3s ease;
+  }
+  
+  .cyber-btn:hover {
+    background: #0369a1;
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 #0ea5e9;
+  }
+  
+  .cyber-btn:hover::after {
+    transform: scale(7);
+    opacity: 0;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-secondary;
+}
+
+/* Animations */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-pulse-fast {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-morph {
+  animation: morph 8s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+.animate-text-shimmer {
+  background: linear-gradient(90deg, #0ea5e9, #0369a1, #0ea5e9);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 3s linear infinite;
+}
+
+@keyframes textShimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.animate-border {
+  position: relative;
+}
+
+.animate-border::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #0ea5e9;
+  transition: width 0.3s ease;
+}
+
+.animate-border:hover::after {
+  width: 100%;
+}
+
+.animate-typing::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-reveal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0ea5e9;
+  transform: translateX(-100%);
+  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes reveal {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-scale {
+  animation: scale 2s ease-in-out infinite alternate;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.animate-rotate-slow {
+  animation: rotateSlow 20s linear infinite;
+}
+
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-shake {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
