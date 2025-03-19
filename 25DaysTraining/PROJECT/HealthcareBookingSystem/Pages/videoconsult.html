@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Consult HealthBridge</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="video.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"> <a href="../index.html"><img
+                    src="../assets/Screenshot_2025-02-24_145648-removebg-preview.png" alt="Logo"></a> </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Find Doctors</a></li>
+                <li><a href="#">Video Consult</a></li>
+
+            </ul>
+        </nav>
+        <a href="#" id="auth-link">
+            <button class="login-btn" id="auth-button">Login / Signup</button>
+        </a>
+        
+    </header>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    updateAuthButton();
+});
+
+function updateAuthButton() {
+    let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    let authButton = document.getElementById("auth-button");
+    let authLink = document.getElementById("auth-link");
+
+    if (currentUser) {
+        // User is logged in, show logout button
+        authButton.innerText = "Logout";
+        authButton.onclick = logout;
+        authLink.href = "#"; // Prevent navigation
+    } else {
+        // User is not logged in, show login button
+        authButton.innerText = "Login / Signup";
+        authButton.onclick = null;
+        authLink.href = "../Pages/signup.html";
+    }
+}
+
+function logout() {
+    if (confirm("Are you sure you want to log out?")) {
+        localStorage.removeItem("currentUser"); // Remove user session
+        alert("Logged out successfully!");
+        updateAuthButton(); // Update UI
+        window.location.href = "../Pages/login.html"; // Redirect to login page
+    }
+}
+
+</script>
+    <section class="hero">
+        <img src="../assets/smiling-woman-holding-mobile-phone-text-messaging.png">
+
+        <div class="hero-text">
+            <h1>Skip the travel! Take Online Doctor Consultation</h1>
+            <p>Private consultation + Audio call • Starts at just ₹199</p>
+            <a href="../Doctors/DrProfile.html">
+                <button class="consult-btn" onclick="bookConsult()">Consult Now</button>
+            </a>
+            <p class="doctor-info"> <span class="dot"></span> 114+ Doctors are online</p>
+        </div>
+
+    </section>
+
+
+
+    <section class="specialities">
+        <h2>25+ Specialities</h2>
+        <p>Consult with top doctors across specialities</p>
+
+        <!-- Swiper Carousel -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide speciality-card">
+                    <a href="#" onclick="redirectToLoginOrConsultation()">
+                        <img src="../assets/general.webp" alt="GeneralPhysician">
+                    </a>
+                    <p>GeneralPhysician</p>
+                    <p>₹499</p>
+                    <a href="videobookingform.html?speciality=GeneralPhysician">
+                        <button>Consult now</button>
+                    </a>
+                </div>
+        
+                <div class="swiper-slide speciality-card">
+                    <a href="#" onclick="redirectToLoginOrConsultation()">
+                        <img src="../assets/dermatology.webp" alt="Dermatology">
+                    </a>
+                    <p>Dermatology</p>
+                    <p>₹499</p>
+                    <a href="videobookingform.html?speciality=Dermatology">
+                        <button>Consult now</button>
+                    </a>
+                </div>
+        
+                <div class="swiper-slide speciality-card">
+                    <a href="#" onclick="redirectToLoginOrConsultation()">
+                        <img src="../assets/orthopaedics.webp" alt="Orthopaedics">
+                    </a>
+                    <p>Orthopaedics</p>
+                    <p>₹399</p>
+                    <a href="videobookingform.html?speciality=Orthopaedics">
+                        <button>Consult now</button>
+                    </a>
+                </div>
+        
+                <div class="swiper-slide speciality-card">
+                    <a href="#" onclick="redirectToLoginOrConsultation()">
+                        <img src="../assets/dentist.webp" alt="Dentist">
+                    </a>
+                    <p>Dentist</p>
+                    <p>₹449</p>
+                    <a href="videobookingform.html?speciality=Dentist">
+                        <button>Consult now</button>
+                    </a>
+                </div>
+        
+                <div class="swiper-slide speciality-card">
+                    <a href="#">
+                        <img src="../assets/neurology.webp" alt="Neurology">
+                    </a>
+                    <p>Neurology</p>
+                    <p>₹449</p>
+                    <a href="videobookingform.html?speciality=Neurology">
+                        <button>Consult now</button>
+                    </a>
+                </div>
+        
+                <div class="swiper-slide speciality-card">
+                    <a href="#" onclick="redirectToLoginOrConsultation()">
+                        <img src="../assets/gastroenterology.webp" alt="Gastroenterology">
+                    </a>
+                    <p>Gastroenterology</p>
+                    <p>₹449</p>
+                    <a href="videobookingform.html?speciality=Gastroenterology">
+                        <button>Consult now</button>
+                    </a>
+                </div>
+        
+                <div class="swiper-slide speciality-card">
+                    <a href="#" onclick="redirectToLoginOrConsultation()">
+                        <img src="../assets/cardiology.webp" alt="Cardiology">
+                    </a>
+                    <p>Cardiology</p>
+                    <p>₹449</p>
+                    <a href="videobookingform.html?speciality=Cardiology">
+                        <button>Consult now</button>
+                    </a>
+                </div>
+        
+                <div class="swiper-slide speciality-card">
+                    <a href="#" onclick="redirectToLoginOrConsultation()">
+                        <img src="../assets/psychology.webp" alt="Psychology">
+                    </a>
+                    <p>Psychology</p>
+                    <p>₹449</p>
+                    <a href="videobookingform.html?speciality=Psychology">
+                        <button>Consult now</button>
+                    </a>
+                </div>
+        
+                <div class="swiper-slide speciality-card">
+                    <a href="#" onclick="redirectToLoginOrConsultation()">
+                        <img src="../assets/endocrinology.webp" alt="Endocrinology">
+                    </a>
+                    <p>Endocrinology</p>
+                    <p>₹449</p>
+                    <a href="videobookingform.html?speciality=Endocrinology">
+                        <button>Consult now</button>
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Navigation Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        
+    </section>
+
+    <section class="offers">
+        <h1>Offers</h1>
+        <div class="offer-container">
+
+            <!-- Offer Card 1 -->
+            <div class="offer-card offer-green">
+                <span class="offer-tag">OFFER</span>
+                <h3>Download the App & get ₹200 HealthCash</h3>
+                <a href="#" class="offer-link">Download App →</a>
+                <img src="../assets/offermobile.png" alt="App Preview" class="offer-image">
+            </div>
+
+            <!-- Offer Card 2 -->
+            <div class="offer-card offer-orange">
+                <span class="offer-tag">OFFER</span>
+                <h3>Consult with specialists at just ₹199</h3>
+                <a href="#" class="offer-link">Consult Now →</a>
+                <img src="../assets/offerdoctor.png" alt="Doctor" class="offer-image">
+            </div>
+
+        </div>
+    </section>
+
+
+    <div class="path">
+        <h1>How it works</h1>
+        <img src="../assets/path.png" alt="">
+    </div>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Column 1: Health Bridge -->
+            <div class="footer-column">
+                <h3>Health Bridge</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Doctor</a></li>
+                    <li><a href="./videoconsult.html">Video Consultation</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: For Patients -->
+            <div class="footer-column">
+                <h3>For Patients</h3>
+                <ul>
+                    <li><a href="../index.html">Search for Doctors</a></li>
+                    <li><a href="../index.html">Search for Hospitals</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: For Doctors -->
+            <div class="footer-column">
+                <h3>For Doctors</h3>
+                <ul>
+                    <li><a href="#">Digital Health Visit</a></li>
+                    <li><a href="#">On-Site Clinical Consultation</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: More -->
+            <div class="footer-column">
+                <h3>More</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="social-media">
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="copyright">
+            &copy; 2025 Health Bridge. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        function redirectToLoginOrConsultation() {
+            const isLoggedIn = false; // Change this based on actual login status
+            if (isLoggedIn) {
+                window.location.href = "consultation.html?speciality=generalphysician";
+            } else {
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+
+        function toggleLogin() {
+            alert("Redirecting to login/signup page...");
+        }
+
+        function bookConsult() {
+            alert("Booking consultation...");
+        }
+
+        function selectSpeciality(speciality) {
+            alert("You selected " + speciality);
+        }
+
+        var swiper = new Swiper(".swiper-container", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                1024: { slidesPerView: 4 }
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

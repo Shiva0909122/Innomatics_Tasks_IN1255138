@@ -1,0 +1,336 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f7fc;
+    display: flex;
+    height: 100vh;
+}
+
+.dashboard {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: row;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #2C3E50;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.menu a,
+.menu button {
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.menu a:hover,
+.menu button:hover {
+    background: #34495E;
+}
+
+.menu .active {
+    background: #1ABC9C;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.header {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Welcome Section */
+.welcome h2 {
+    color: #34495E;
+}
+
+/* Statistics */
+.stats {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 200px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stat-card h3 {
+    margin: 0;
+    color: #2C3E50;
+}
+
+.stat-card p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1ABC9C;
+}
+
+/* Appointments & Medical Records */
+.appointments,
+.records {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.appointments h3,
+.records h3 {
+    color: #2C3E50;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #ECF0F1;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+ul li button {
+    background: #E74C3C;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ul li button:hover {
+    background: #C0392B;
+}
+
+/* Profile */
+.profile {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info p {
+    margin: 10px 0;
+}
+
+.profile-info strong {
+    color: #2C3E50;
+}
+
+/* Buttons */
+button {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    background: #1ABC9C;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #16A085;
+}
+
+/* Booking Form */
+#booking-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    display: none;
+}
+
+.form-container {
+    text-align: center;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .menu {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .menu a,
+    .menu button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .content {
+        margin-top: 70px;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul li button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        /* flex-direction: column; */
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        overflow-y: auto;
+        /* Allows scrolling inside the sidebar */
+        max-height: 100vh;
+    }
+.logo a img{
+height: 75px;
+width: 150px;
+}
+    .hb {
+        display: none;
+    }
+
+    .menu {
+        flex-grow: 1;
+        /* Allows the menu to take available space */
+        overflow-y: auto;
+        /* Enables scrolling if content exceeds space */
+        /* height: auto;? */
+    }
+
+    #booking-form {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        width: 90%;
+        max-width: 400px;
+        display: block;
+        /* Ensure it's visible */
+        z-index: 1000;
+        /* Bring it to the front */
+    }
+
+    .menu a,
+    .menu button {
+        width: 100%;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .stat-card {
+        width: 100%;
+    }
+
+    .appointments,
+    .records,
+    .profile {
+        padding: 15px;
+    }
+}

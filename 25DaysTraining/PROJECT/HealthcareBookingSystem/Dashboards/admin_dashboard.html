@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="doctor_dashboard.css">
+    <script defer src="admin_dashboard.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i data-lucide="activity"></i>
+                <span class="title">
+                    <img src="./assets/logo.png" alt="" class="logo1">
+                    HealthBridge</span>
+            </div>
+            <nav class="menu">
+                <a href="#" class="active"><i data-lucide="users"></i> Users</a>
+                <a href="#"><i data-lucide="calendar"></i> Appointments</a>
+                <a href="#"><i data-lucide="clipboard-list"></i> Medical Records</a>
+                <a href="#"><i data-lucide="settings"></i> Settings</a>
+                <button onclick="logout()"><i data-lucide="log-out"></i> Logout</button>
+            </nav>
+        </aside>
+    
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Header -->
+            <header class="header">
+                <h1>Admin Dashboard</h1>
+            </header>
+    
+            <!-- Welcome Section -->
+            <section class="welcome">
+                <h2>Welcome, Admin <span id="admin-name">Admin</span>!</h2>
+                <p>Manage users, appointments, and medical records from this dashboard.</p>
+            </section>
+    
+            <!-- Statistics -->
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>Total Users</h3>
+                    <p id="users-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Appointments</h3>
+                    <p id="appointments-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Medical Records</h3>
+                    <p id="records-count">0</p>
+                </div>
+            </section>
+    
+            <!-- Users Section -->
+            <section class="users">
+                <h3>Manage Users</h3>
+                <p id="users-list">Loading users...</p>
+            </section>
+    
+            <!-- Appointment & Records Section -->
+            <section class="appointments-records">
+                <div class="appointments">
+                    <h3>Upcoming Appointments</h3>
+                    <p id="upcoming-appointments" class="empty">No upcoming appointments</p>
+                </div>
+                <div class="records">
+                    <h3>Medical Records</h3>
+                    <p id="recent-records" class="empty">No recent records</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+</body>
+</html>

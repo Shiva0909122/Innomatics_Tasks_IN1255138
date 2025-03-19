@@ -1,0 +1,371 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #0555b7;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #1f303d;
+}
+
+.login-btn {
+    background-color: #307ab2;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.login-btn:hover {
+    background-color: rgb(180, 225, 249);
+    color: #307ab2;
+}
+
+.search-container {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 45px;
+    margin-top: 30px;
+    margin-left: 468px;
+
+}
+
+#searchInput {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 10px;
+}
+
+
+.services {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+
+}
+
+.card {
+    background: white;
+    padding: 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 240px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+
+
+.image-container img {
+    width: 80%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+
+}
+
+.content {
+    padding: 15px;
+}
+
+.content h3 {
+    margin-top: 20px;
+    font-size: 14px;
+    /* font-weight: bold; */
+    font-family: "Poppins", serif;
+    color: black;
+    text-decoration: none;
+
+}
+
+.content p {
+    font-size: 12px;
+    color: #555;
+    font-family: "Poppins";
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.hospitals  {
+    color: rgb(70, 131, 237);
+    margin-top: 80px;
+    margin-left: 29%;
+}
+
+/* Slider Container */
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+/* Logo Wrapper */
+.logo-slider {
+    display: flex;
+    width: 200%;
+    animation: slide 20s linear infinite;
+}
+
+/* Individual Logos */
+.logo-item {
+    flex: 0 0 10%;
+    text-align: center;
+    padding: 10px;
+}
+
+.logo-item img {
+    width: 220px;
+    height: 100px;
+    /* border-radius: 10%; */
+    object-fit: cover;
+}
+
+.logo-item p {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Infinite Scroll Animation */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+
+.browser h2 {
+    margin-left: 39%;
+}
+
+.gradient {
+color: rgb(70, 131, 237);
+}
+
+h2 {
+    text-align: left;
+    margin-left: 70px;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 70px;
+    
+}
+
+.specialties-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.specialty {
+    width: 120px;
+    text-align: center;
+}
+
+.specialty img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    padding: 10px;
+    object-fit: cover;
+    /* Ensures full circular crop */
+}
+
+.specialty p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+ /* footer */
+
+ .footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 130px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1100px;
+    margin: auto;
+    flex-wrap: wrap;
+    text-align: left;
+
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+    margin: 10px;
+    margin-left: 7%;
+
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f39c12;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #f39c12;
+    text-decoration: underline;
+}
+
+/* Social Media Links */
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-media a:hover {
+    color: #f39c12;
+}
+
+/* Copyright Section */
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-container {
+        margin-left: 22px;
+        width: 80%;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+
+    .card {
+        margin: 0 auto 20px;
+    }
+
+    .hospitals {
+        text-align: center;
+        margin-left: -28px;
+        
+    }
+.browser{
+    margin-left: -205px;
+    /* text-align: center; */
+}
+    .browser h2 {
+        text-align: center;
+    }
+
+    .specialties-container {
+        padding: 0;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+   
+}
+
+

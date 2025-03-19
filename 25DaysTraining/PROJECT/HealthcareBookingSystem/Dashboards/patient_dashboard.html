@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <a href="../index.html" target="blank"> <img src="../assets/logo.png" alt="Logo"></a>
+                <span class="hb">HealthBridge</span>
+            </div>
+            <nav class="menu">
+                <a href="#" class="active">My Appointments</a>
+                <a href="#">Medical Records</a>
+                <a href="/Doctors/DrProfile.html" target="blank">Profile</a>
+                <button onclick="logout()">Logout</button>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Header -->
+            <header class="header">
+                <h1>Patient Dashboard</h1>
+            </header>
+
+            <!-- Welcome Section -->
+            <section class="welcome">
+                <h2>Welcome, <span id="patient-name"></span>!</h2>
+                <p>Manage your appointments and medical records.</p>
+            </section>
+
+            <!-- Statistics -->
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>Total Appointments</h3>
+                    <p id="appointments-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Medical Records</h3>
+                    <p id="records-count">0</p>
+                </div>
+            </section>
+
+            <!-- Appointments Section -->
+            <section class="appointments">
+                <h3>My Appointments</h3>
+                <ul id="patient-appointments">No appointments booked.</ul>
+                <button onclick="openBookingForm()">Book Appointment</button>
+            </section>
+
+            <!-- Medical Records Section -->
+            <section class="records">
+                <h3>My Medical Records</h3>
+                <ul id="medical-records">No medical records found.</ul>
+            </section>
+
+            <!-- Profile Section -->
+            <section class="profile">
+                <h3>My Profile</h3>
+                <div class="profile-info">
+                    <p><strong>Name:</strong> <span id="profile-name"></span></p>
+                    <p><strong>Email:</strong> <span id="profile-email"></span></p>
+                    <p><strong>Mobile:</strong> <span id="profile-mobile"></span></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Appointment Booking Form (Popup) -->
+    <div id="booking-form" class="form-popup">
+        <div class="form-container">
+            <h2>Book an Appointment</h2>
+            <form id="appointment-form">
+                <label for="symptom">Tell us your symptom</label>
+                <input type="text" id="symptom" placeholder="Eg: Fever, Headache" required>
+
+                <label for="time-slot">Select Time Slot</label>
+                <select id="time-slot" required></select>
+
+                <button type="submit">Submit</button>
+                <button type="button" class="cancel" onclick="closeBookingForm()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            if (!currentUser || currentUser.role !== "patient") {
+                alert("Unauthorized access! Redirecting to login...");
+                window.location.href = "../Pages/login.html";
+                return;
+            }
+
+            // Set patient details
+            document.getElementById("patient-name").innerText = currentUser.username;
+            document.getElementById("profile-name").innerText = currentUser.username;
+            document.getElementById("profile-email").innerText = currentUser.email;
+            document.getElementById("profile-mobile").innerText = currentUser.mobile;
+
+            loadAppointments();
+            loadMedicalRecords();
+            populateTimeSlots();
+        });
+
+        function loadAppointments() {
+            let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+            let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            let userAppointments = appointments.filter(appt => appt.patientId === currentUser.email);
+
+            const appointmentList = document.getElementById("patient-appointments");
+            appointmentList.innerHTML = userAppointments.length > 0 ?
+                userAppointments.map(appt => `
+                    <li>
+                        <strong>Dr. ${appt.doctorName}</strong> - ${appt.symptom} at ${appt.timeSlot}
+                        <button onclick="cancelAppointment('${appt.timeSlot}')">Cancel</button>
+                    </li>
+                `).join("") : "No appointments booked.";
+
+            document.getElementById("appointments-count").textContent = userAppointments.length;
+        }
+
+        function loadMedicalRecords() {
+            let medicalRecords = JSON.parse(localStorage.getItem("medicalRecords")) || [];
+            let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            let userRecords = medicalRecords.filter(record => record.patientId === currentUser.email);
+
+            const recordsList = document.getElementById("medical-records");
+            recordsList.innerHTML = userRecords.length > 0 ?
+                userRecords.map(record => `
+                    <li>
+                        <strong>Doctor:</strong> ${record.doctorName} <br>
+                        <strong>Diagnosis:</strong> ${record.diagnosis} <br>
+                        <strong>Date:</strong> ${record.date}
+                    </li>
+                `).join("") : "No medical records found.";
+
+            document.getElementById("records-count").textContent = userRecords.length;
+        }
+
+        function openBookingForm() {
+            document.getElementById("booking-form").style.display = "flex";
+        }
+
+        function closeBookingForm() {
+            document.getElementById("booking-form").style.display = "none";
+        }
+
+        function populateTimeSlots() {
+            let timeSlots = ["10:00 AM", "10:20 AM", "10:40 AM", "11:00 AM", "11:20 AM", "2:00 PM", "2:20 PM", "2:40 PM", "3:00 PM"];
+            let select = document.getElementById("time-slot");
+            select.innerHTML = timeSlots.map(time => `<option value="${time}">${time}</option>`).join("");
+        }
+
+        document.getElementById("appointment-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let patientName = document.getElementById("patient-name").innerText;
+            let symptom = document.getElementById("symptom").value;
+            let timeSlot = document.getElementById("time-slot").value;
+            let doctorName = "Dr. Smith"; // Example doctor
+            let patientId = JSON.parse(localStorage.getItem("currentUser")).email;
+
+            let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+            appointments.push({ patientName, symptom, timeSlot, doctorName, patientId });
+            localStorage.setItem("appointments", JSON.stringify(appointments));
+
+            alert("Appointment booked!");
+            closeBookingForm();
+            loadAppointments();
+        });
+
+        function cancelAppointment(timeSlot) {
+            if (confirm("Are you sure you want to cancel this appointment?")) {
+                let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+                let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+                appointments = appointments.filter(appt => !(appt.patientId === currentUser.email && appt.timeSlot === timeSlot));
+
+                localStorage.setItem("appointments", JSON.stringify(appointments));
+                alert("Appointment canceled!");
+                loadAppointments();
+            }
+        }
+
+        function logout() {
+            alert("Logging out...");
+            window.location.href = "../Pages/login.html";
+        }
+    </script>
+</body>
+
+</html>

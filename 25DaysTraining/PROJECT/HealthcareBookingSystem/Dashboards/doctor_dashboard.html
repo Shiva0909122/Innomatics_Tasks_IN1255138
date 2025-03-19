@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="doctor_dashboard.css">
+    <script defer src="doctor_dashboard.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i data-lucide="activity"></i>
+                <span class="title">
+                    <img src="./assets/logo.png" alt="" class="logo1">
+                    HealthBridge</span>
+            </div>
+            <nav class="menu">
+                <a href="#" class="active"><i data-lucide="users"></i> Patients</a>
+                <a href="#"><i data-lucide="calendar"></i> Appointments</a>
+                <a href="#"><i data-lucide="clipboard-list"></i> Medical Records</a>
+                <a href="#"><i data-lucide="settings"></i> Settings</a>
+                <button onclick="logout()"><i data-lucide="log-out"></i> Logout</button>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Header -->
+            <header class="header">
+                <h1>Doctor Dashboard</h1>
+            </header>
+
+            <!-- Welcome Section -->
+            <section class="welcome">
+                <h2>Welcome, Dr. <span id="doctor-name">John Doe</span>!</h2>
+                <p>Manage appointments, access medical records, and update your profile.</p>
+            </section>
+
+            <!-- Statistics -->
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>Today's Appointments</h3>
+                    <p id="appointments-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Patients</h3>
+                    <p id="patients-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Reports</h3>
+                    <p id="reports-count">0</p>
+                </div>
+            </section>
+
+            <!-- Appointment & Patients Section -->
+            <section class="appointments-patients">
+                <div class="appointments">
+                    <h3>Upcoming Appointments</h3>
+                    <p id="upcoming-appointments" class="empty">No upcoming appointments</p>
+                </div>
+                <div class="patients">
+                    <h3>Recent Patients</h3>
+                    <p id="recent-patients" class="empty">No recent patients</p>
+                </div>
+            </section>
+
+            <!-- Profile Section -->
+            <section class="profile">
+                <h3>Your Profile</h3>
+                <div class="profile-info">
+                    <p><strong>Username:</strong> Dr. <span id="doctor-username">John Doe</span></p>
+                    <p><strong>Email:</strong> <span id="doctor-email">john.doe@example.com</span></p>
+                    <p><strong>Mobile:</strong> <span id="doctor-mobile">+1234567890</span></p>
+                    <p><strong>Role:</strong> <span id="doctor-role">Doctor</span></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Search & Filters</title>
+    <link rel="stylesheet" href="doctors.css"> <!-- Include your CSS file -->
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <nav class="header">
+        <img src="../assets/logo.png">
+        <div class="links">
+            <a href="/index.html" class="find">Find Doctors</a>
+            <a href="../Pages/videoconsult.html" class="video">Video Consult</a>
+        </div>
+
+        <a href="#" id="auth-link">
+            <button class="login-btn" id="auth-button">Login / Signup</button>
+        </a>
+    </nav>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            updateAuthButton();
+        });
+
+        function updateAuthButton() {
+            let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            let authButton = document.getElementById("auth-button");
+            let authLink = document.getElementById("auth-link");
+
+            if (currentUser) {
+                // User is logged in, show logout button
+                authButton.innerText = "Logout";
+                authButton.onclick = logout;
+                authLink.href = "#"; // Prevent navigation
+            } else {
+                // User is not logged in, show login button
+                authButton.innerText = "Login / Signup";
+                authButton.onclick = null;
+                authLink.href = "../Pages/signup.html";
+            }
+        }
+
+        function logout() {
+            if (confirm("Are you sure you want to log out?")) {
+                localStorage.removeItem("currentUser"); // Remove user session
+                alert("Logged out successfully!");
+                updateAuthButton(); // Update UI
+                window.location.href = "../Pages/login.html"; // Redirect to login page
+            }
+        }
+
+    </script>
+
+    <!-- Filter Section -->
+    <div class="filter-container">
+        <input type="text" id="searchBar" placeholder="Search Doctors">
+        <select id="genderFilter">
+            <option value="">Gender</option>
+            <option value="Male">Male Doctor</option>
+            <option value="Female">Female Doctor</option>
+        </select>
+
+        <select id="experienceFilter">
+            <option value="">Experience</option>
+            <option value="5">5+ Years</option>
+            <option value="10">10+ Years</option>
+            <option value="15">15+ Years</option>
+            <option value="20">20+ Years</option>
+        </select>
+
+        <!-- Dropdown for Additional Filters -->
+        <div class="dropdown">
+            <button id="filterToggle">All Filters ▼</button>
+            <div class="dropdown-content" id="filterMenu">
+                <label><input type="radio" name="fees" value="500"> ₹0-₹500</label>
+                <label><input type="radio" name="fees" value="1000"> Above ₹500</label>
+                <label><input type="radio" name="fees" value="2000"> Above ₹1000</label>
+                <label><input type="radio" name="fees" value="3000"> Above ₹2000</label>
+                <hr>
+                <label><input type="radio" name="availability" value="4"> Available in next 4 hours</label>
+                <label><input type="radio" name="availability" value="Today"> Available Today</label>
+                <label><input type="radio" name="availability" value="Tomorrow"> Available Tomorrow</label>
+                <label><input type="radio" name="availability" value="7" checked> Available in next 7 days</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Doctor List -->
+    <section>
+        <aside class="leftbox">
+            <!-- Doctor cards will be generated here using JavaScript -->
+        </aside>
+    </section>
+
+    <script src="script.js"></script> <!-- Include JavaScript -->
+</body>
+
+</html>

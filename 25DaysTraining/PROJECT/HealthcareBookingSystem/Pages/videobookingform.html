@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Appointment Booking</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="bookingform.css">
+  
+
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="#">
+            <img src="../assets/Screenshot_2025-02-24_145648-removebg-preview.png" alt="Logo">
+        </a>
+        <h2>Book an Appointment</h2>
+        <form>
+            <div class="form-group">
+                <label>Tell us your symptom or health problem</label>
+                <input class="label" type="text" placeholder="Eg: Fever, Headache" required>
+            </div>
+            <div class="form-group">
+                <label>Patient Name</label>
+                <input class="label" type="text" placeholder="Enter patient name" required>
+            </div>
+            <div class="form-group">
+                <label>Mobile Number</label>
+                <input class="label" type="number" placeholder="Enter mobile number" required>
+            </div>
+            <div class="slots">
+                <h3>Morning Slots</h3>
+                <div id="morning-slots" class="slot-container"></div>
+                <h3>Afternoon Slots</h3>
+                <div id="afternoon-slots" class="slot-container"></div>
+            </div>
+            <button id="submit-btn" type="submit" disabled onclick="success(event)">Submit</button>
+
+        </form>
+    </div>
+
+    <script>
+        function success(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            const symptom = document.querySelector('input[placeholder="Eg: Fever, Headache"]').value;
+            const patientName = document.querySelector('input[placeholder="Enter patient name"]').value;
+            const mobileNumber = document.querySelector('input[placeholder="Enter mobile number"]').value;
+            const selectedSlot = document.querySelector('.time-slot.selected')?.innerText;
+
+            if (!selectedSlot) {
+                alert("Please select a time slot before submitting.");
+                return;
+            }
+
+            // Create an appointment object
+            const appointment = {
+                symptom,
+                patientName,
+                mobileNumber,
+                timeSlot: selectedSlot
+            };
+
+            // Retrieve existing appointments from localStorage
+            let appointments = JSON.parse(localStorage.getItem('appointments')) || [];
+            appointments.push(appointment);
+
+            // Save updated list to localStorage
+            localStorage.setItem('appointments', JSON.stringify(appointments));
+
+            alert('Appointment booked successfully!');
+
+            // Redirect to doctor dashboard
+            window.location.href = "../Dashboards/doctor_dashboard.html";
+        }
+    </script>
+
+
+
+
+    <script>
+
+        const morningTimes = [];
+        for (let h = 10; h < 12; h++) {
+            for (let m = 0; m < 60; m += 20) {
+                morningTimes.push(`${h}:${m.toString().padStart(2, '0')} AM`);
+            }
+        }
+
+        const afternoonTimes = [];
+        for (let h = 14; h <= 16; h++) {
+            for (let m = 0; m < 60; m += 20) {
+                if (h === 16 && m > 40) break;
+                afternoonTimes.push(`${h > 12 ? h - 12 : h}:${m.toString().padStart(2, '0')} PM`);
+            }
+        }
+
+        function populateSlots(times, containerId) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = times
+                .map(time => `<div class="time-slot" onclick="selectSlot(this)">${time}</div>`)
+                .join('');
+        }
+
+        function selectSlot(slot) {
+            document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+            slot.classList.add('selected');
+            document.getElementById('submit-btn').disabled = false;
+        }
+
+        populateSlots(morningTimes, 'morning-slots');
+        populateSlots(afternoonTimes, 'afternoon-slots');
+    </script>
+
+
+</body>
+
+</html>

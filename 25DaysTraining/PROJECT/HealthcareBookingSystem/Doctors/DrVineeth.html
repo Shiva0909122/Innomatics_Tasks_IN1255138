@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Vineeth Profile</title>
+    <link rel="stylesheet" href="doctorprofile.css">
+
+</head>
+
+<body>
+
+    <div class="profile-container">
+        <!-- Doctor Details Section -->
+        <div class="doctor-header">
+            <div class="doctor-info">
+                <img src="../assets/doctorpfile1.png" alt="Doctor Image" class="doctor-img">
+                <div class="doctor-text">
+                    <h2>Dr. Vineeth</h2>
+                    <p class="qualification">MBBS, MD - General Medicine, DNB - Gastroenterology</p>
+                    <p class="languages">🌍 English, Hindi, Telugu, Tamil</p>
+                </div>
+            </div>
+            <div class="doctor-rating">
+                <div class="rating">
+                    ⭐ <span class="bold-text">4.57</span>
+                </div>
+                <p>1365 Reviews</p>
+                <div class="divider"></div>
+                <p><strong>11 Years</strong><br>Experience</p>
+            </div>
+           
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="main-content">
+            <div class="left-section">
+                <div class="info-card">
+                    <h3>🏥 Aster Prime Hospital</h3>
+                    <p>Aster Prime Hospital, Plot No 4, HMDA Maitrivanam, Satyam Theatre Rd, beside Blue Fox Hotel,
+                        Kumar Basti, Srinivasa Nagar, Ameerpet, Hyderabad, Telangana 500038</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>🔴 About the doctor</h3>
+                    <p>Dr. Snehitha is an expert and experienced Gastroenterology with an experience of 11 years. The
+                        doctor specializes in Acid Reflux and Peptic Ulcer Disease, Hepatitis and Cirrhosis,
+                        Pancreatitis and Cholecystitis, Colitis, and Cancers. Currently, Dr. Dheeraj Kumar Anupa is
+                        practicing at Aster Prime Hospital in Aster Prime Hospital, Plot No 4,...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="consult-card">
+                    <h3>Instantly Consult With Doctor</h3>
+                    <a href="../Pages/videobookingform.html">
+                    <button class="btn-primary">Book Now</button>
+                </a>
+                </div>
+
+                <div class="info-card1">
+                    <h3>🧑‍⚕️ Membership</h3>
+                    <p>Andhra Pradesh Medical Council</p>
+                    <h3>➕ Medical Council ID (License)</h3>
+                    <p>APMC - 79933</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector(".like-btn").addEventListener("click", function () {
+            this.classList.toggle("liked");
+            this.style.backgroundColor = this.classList.contains("liked") ? "pink" : "white";
+            this.style.color = this.classList.contains("liked") ? "white" : "pink";
+        });
+
+        document.querySelector(".share-btn").addEventListener("click", function () {
+            alert("Share link copied to clipboard!");
+        });
+    });
+</script>
+
+</html>
